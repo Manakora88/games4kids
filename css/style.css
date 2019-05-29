@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #aaa;
+}
+
+#part1, #part2, #part3, #part4 {
+    display: table-row;
+}
+
+/* Poszczególne elementy puzzli */
+.block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15, .block16 {
+    display: table-cell;
+    width: 125px;
+    height: 125px;
+    border: 2px solid white;
+    background: url(../img/mountain.jpg);
+    cursor: pointer;
+}
+
+.block1 {
+    background-position: 0 0;
+}
+
+.block2 {
+    background-position: -125px 0;
+}
+
+.block3 {
+    background-position: -250px 0;
+}
+
+.block4 {
+    background-position: -375px 0;
+}
+
+.block5 {
+    background-position: 0 -125px;
+}
+
+.block6 {
+    background-position: -125px -125px;
+}
+
+.block7 {
+    background-position: -250px -125px;
+}
+
+.block8 {
+    background-position: -375px -125px;
+}
+
+.block9 {
+    background-position: 0 -250px;
+}
+
+.block10 {
+    background-position: -125px -250px;
+}
+
+.block11 {
+    background-position: -250px -250px;
+}
+
+.block12 {
+    background-position: -375px -250px;
+}
+
+.block13 {
+    background-position: 0 -375px;
+}
+
+.block14 {
+    background-position: -125px -375px;
+}
+
+.block15 {
+    background-position: -250px -375px;
+}
+
+.block16 {
+    background: white;
+    cursor: default;
+}
