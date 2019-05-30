@@ -5,97 +5,98 @@
         <meta charset="utf-8">
         <title>Puzzle</title>
         <link rel='stylesheet' href='css/style.css'>
+        <link href="https://fonts.googleapis.com/css?family=Pangolin&display=swap&subset=latin-ext" rel="stylesheet">
     </head>
 
     <body>
         <main>
-            <div id="table" style="display: table;">
-               <div id="part1">
-                  <div id="square1_1" class="block1" onclick="clkBlock(1,1)"></div>
-                  <div id="square1_2" class="block2" onclick="clkBlock(1,2)"></div>
-                  <div id="square1_3" class="block3" onclick="clkBlock(1,3)"></div>
-                  <div id="square1_4" class="block4" onclick="clkBlock(1,4)"></div>
-               </div>
-               <div id="part2">
-                  <div id="square2_1" class="block5" onclick="clkBlock(2,1)"></div>
-                  <div id="square2_2" class="block6" onclick="clkBlock(2,2)"></div>
-                  <div id="square2_3" class="block7" onclick="clkBlock(2,3)"></div>
-                  <div id="square2_4" class="block8" onclick="clkBlock(2,4)"></div>
-               </div>
-               <div id="part3">
-                  <div id="square3_1" class="block9" onclick="clkBlock(3,1)"></div>
-                  <div id="square3_2" class="block10" onclick="clkBlock(3,2)"></div>
-                  <div id="square3_3" class="block11" onclick="clkBlock(3,3)"></div>
-                  <div id="square3_4" class="block12" onclick="clkBlock(3,4)"></div>
-               </div>
-               <div id="part4">
-                  <div id="square4_1" class="block13" onclick="clkBlock(4,1)"></div>
-                  <div id="square4_2" class="block14" onclick="clkBlock(4,2)"></div>
-                  <div id="square4_3" class="block15" onclick="clkBlock(4,3)"></div>
-                  <div id="square4_4" class="block16" onclick="clkBlock(4,4)"></div>
-               </div>
+            <div id="table" class="center">
+                 <div id="part1">
+                    <div id="square1_1" class="block1" onClick="clkBlock(1,1)"></div>
+                    <div id="square1_2" class="block2" onClick="clkBlock(1,2)"></div>
+                    <div id="square1_3" class="block3" onClick="clkBlock(1,3)"></div>
+                    <div id="square1_4" class="block4" onClick="clkBlock(1,4)"></div>
+                 </div>
+                 <div id="part2">
+                    <div id="square2_1" class="block5" onClick="clkBlock(2,1)"></div>
+                    <div id="square2_2" class="block6" onClick="clkBlock(2,2)"></div>
+                    <div id="square2_3" class="block7" onClick="clkBlock(2,3)"></div>
+                    <div id="square2_4" class="block8" onClick="clkBlock(2,4)"></div>
+                 </div>
+                 <div id="part3">
+                    <div id="square3_1" class="block9" onClick="clkBlock(3,1)"></div>
+                    <div id="square3_2" class="block10" onClick="clkBlock(3,2)"></div>
+                    <div id="square3_3" class="block11" onClick="clkBlock(3,3)"></div>
+                    <div id="square3_4" class="block12" onClick="clkBlock(3,4)"></div>
+                 </div>
+                 <div id="part4">
+                    <div id="square4_1" class="block13" onClick="clkBlock(4,1)"></div>
+                    <div id="square4_2" class="block14" onClick="clkBlock(4,2)"></div>
+                    <div id="square4_3" class="block15" onClick="clkBlock(4,3)"></div>
+                    <div id="square4_4" class="block16" onClick="clkBlock(4,4)"></div>
+                 </div>
             </div>
-            <button onclick="mix()">Przemieszaj</button>
+            <button class="center" onClick="mix()">Przemieszaj</button>
         </main>
 
 
         <script>
 
-        //tworzę funkcję do zamiany poszczególnych puzzli
-        function goBlocks(square1, square2) {
-            var sq = document.getElementById(square1).className;
-            document.getElementById(square1).className = document.getElementById(square2).className;
-            document.getElementById(square2).className = sq;
-        }
-
-
-        //tworzę funkcję, która przetasuje układ puzzli
-        function mix() {
-            for (var row = 1; row <= 4; row++) {
-                for (var col = 1; col <= 4; col++) {
-                    var roww = Math.floor(Math.random()*4 + 1); //losowy rząd 1-4
-                    var coll = Math.floor(Math.random()*4 + 1); //losowa kolumna 1-4
-
-                    goBlocks("square" + row + "_" + col, "square" + roww + "_" + coll);
-                }
+            //tworzę funkcję do zamiany poszczególnych puzzli
+            function goBlocks(square1, square2) {
+              var sq = document.getElementById(square1).className;
+              document.getElementById(square1).className = document.getElementById(square2).className;
+              document.getElementById(square2).className = sq;
             }
-        }
 
-        //funkcja do przesuwania puzzli w miejsce białego miejsca
-        function clkBlock(row, col) {
-            var square = document.getElementById("square" + row + "_" + col);
-            var block = square.className;
-            if (block != "block16") {
-                // jeśli puste miejsce mam po lewej stronie
-                if (col > 1) {
-                    if (document.getElementById("square" + row + "_" + (col - 1)).className == "square16") {
-                        mix("square" + row + "_" + col, "square" + row + "_" + (col - 1));
-                        return;
-                    }
-                }
-                // jeśli puste miejsce mam po prawej stronie
-                if (col < 4) {
-                    if (document.getElementById("square" + row + "_" + (col + 1)).className == "square16") {
-                        mix("square" + row + "_" + col, "square" + row + "_" + (col + 1));
-                        return;
-                    }
-                }
-                // jeśli puste miejsce mam powyżej
-                if (row > 1 ) {
-                    if (document.getElementById("square" + (row - 1) + "_" + col).className == "square16") {
-                        mix("square" + row + "_" + col, "square" + (row - 1) + "_" + col);
-                        return;
-                    }
-                }
-                // jeśli puste miejsce mam poniżej
-                if (row < 4 ) {
-                    if (document.getElementById("square" + (row + 1) + "_" + col).className == "square16") {
-                        mix("square" + row + "_" + col, "square" + (row + 1) + "_" + col);
-                        return;
+
+            //tworzę funkcję, która przetasuje układ puzzli
+            function mix() {
+                for (var row = 1; row <= 4; row++) {
+                    for (var col = 1; col <= 4; col++) {
+                        var roww = Math.floor(Math.random()*4 + 1); //losowy rząd 1-4
+                        var coll = Math.floor(Math.random()*4 + 1); //losowa kolumna 1-4
+
+                        goBlocks("square" + row + "_" + col, "square" + roww + "_" + coll);
                     }
                 }
             }
-        }
+
+            //funkcja do przesuwania puzzli w miejsce białego miejsca
+            function clkBlock(row,col) {
+                var square = document.getElementById("square" + row + "_" + col);
+                var block = square.className;
+                if (block != "block16") {
+                    // jeśli puste miejsce mam po lewej stronie
+                    if (col > 1) {
+                        if (document.getElementById("square" + row + "_" + (col - 1)).className == "block16") {
+                            goBlocks("square" + row + "_" + col, "square" + row + "_" + (col - 1));
+                            return;
+                        }
+                    }
+                    // jeśli puste miejsce mam po prawej stronie
+                    if (col < 4) {
+                        if (document.getElementById("square" + row + "_" + (col + 1)).className == "block16") {
+                            goBlocks("square" + row + "_" + col, "square" + row + "_" + (col + 1));
+                            return;
+                        }
+                    }
+                    // jeśli puste miejsce mam powyżej
+                    if (row > 1 ) {
+                        if (document.getElementById("square" + (row - 1) + "_" + col).className == "block16") {
+                            goBlocks("square" + row + "_" + col, "square" + (row - 1) + "_" + col);
+                            return;
+                        }
+                    }
+                    // jeśli puste miejsce mam poniżej
+                    if (row < 4 ) {
+                        if (document.getElementById("square" + (row + 1) + "_" + col).className == "block16") {
+                            goBlocks("square" + row + "_" + col, "square" + (row + 1) + "_" + col);
+                            return;
+                        }
+                    }
+                }
+            }
         </script>
     </body>
 

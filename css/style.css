@@ -6,10 +6,22 @@
 
 body {
     background: #aaa;
+
+    text-transform: uppercase;
+}
+
+.center {
+    display: table;
+    margin: 0 auto;
 }
 
 #part1, #part2, #part3, #part4 {
     display: table-row;
+}
+
+button {
+  font-family: 'Pangolin', cursive;
+  color: black;
 }
 
 /* Poszczególne elementy puzzli */
