@@ -5,14 +5,29 @@
 }
 
 body {
-    background: #aaa;
-
+    background-image: url(../img/pattern.png);
     text-transform: uppercase;
+}
+
+/* Nagłówek */
+header {
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    margin: 30px 0;
+    color: grey;
+    text-shadow: 5px 5px 5px lightgrey;
+}
+
+#table {
+    border: 2px solid white;
 }
 
 .center {
     display: table;
-    margin: 0 auto;
+    margin: 20px auto;
+    box-shadow: 5px 5px 5px grey;
 }
 
 #part1, #part2, #part3, #part4 {
@@ -20,8 +35,16 @@ body {
 }
 
 button {
-  font-family: 'Pangolin', cursive;
-  color: black;
+    font-family: 'Righteous', cursive;
+    color: grey;
+    background-color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: lightgrey;
+    color: black;
 }
 
 /* Poszczególne elementy puzzli */
