@@ -10,9 +10,10 @@
 
     <body>
         <header>
-            <h1>Puzzle</h1>
+            <h1>Gry dla dzieci - <span>Puzzle<span></h1>
         </header>
-        <main>
+        <section class="main-puzzle">
+            <button class="center" onClick="mix()">Przemieszaj</button>
             <div id="table" class="center">
                  <div id="part1">
                     <div id="square1_1" class="block1" onClick="clkBlock(1,1)"></div>
@@ -39,9 +40,26 @@
                     <div id="square4_4" class="block16" onClick="clkBlock(4,4)"></div>
                  </div>
             </div>
-            <button class="center" onClick="mix()">Przemieszaj</button>
-        </main>
-
+        </section>
+        <section class="choice-puzzle">
+            <div class="center choice">
+                Wybierz obrazek
+            </div>
+            <div id="table" class="center">
+                <div class="line1">
+                    <div class="kind1 picture" onClick="choicePicture()">
+                    </div>
+                    <div class="kind2 picture" onClick="choicePicture()">
+                    </div>
+                </div>
+                <div class="line2">
+                    <div class="kind3 picture" onClick="choicePicture()">
+                    </div>
+                    <div class="kind4 picture" onClick="choicePicture()">
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <script>
 
@@ -100,6 +118,8 @@
                     }
                 }
             }
+
+
         </script>
     </body>
 

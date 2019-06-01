@@ -16,8 +16,16 @@ header {
     text-align: center;
     letter-spacing: 5px;
     margin: 30px 0;
-    color: grey;
+    color: #ffc400;
     text-shadow: 5px 5px 5px lightgrey;
+}
+
+header span {
+    color: #ff9900;
+}
+
+.main-puzzle, .choice-puzzle {
+    width: 100%;
 }
 
 #table {
@@ -34,27 +42,34 @@ header {
     display: table-row;
 }
 
-button {
+button, .choice {
     font-family: 'Righteous', cursive;
     color: grey;
+    font-size: 14px;
     background-color: white;
     padding: 5px 10px;
+}
+
+button {
     cursor: pointer;
 }
 
 button:hover {
-    background-color: lightgrey;
+    background-color: #eceff1;
     color: black;
 }
 
 /* Poszczególne elementy puzzli */
 .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15, .block16 {
     display: table-cell;
-    width: 125px;
-    height: 125px;
+    width: 90px;
+    height: 90px;
     border: 2px solid white;
-    background: url(../img/mountain.jpg);
     cursor: pointer;
+}
+
+.block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15 {
+    background: url(../img/mountain1.jpg);
 }
 
 .block1 {
@@ -62,62 +77,169 @@ button:hover {
 }
 
 .block2 {
-    background-position: -125px 0;
+    background-position: -90px 0;
 }
 
 .block3 {
-    background-position: -250px 0;
+    background-position: -180px 0;
 }
 
 .block4 {
-    background-position: -375px 0;
+    background-position: -270px 0;
 }
 
 .block5 {
-    background-position: 0 -125px;
+    background-position: 0 -90px;
 }
 
 .block6 {
-    background-position: -125px -125px;
+    background-position: -90px -90px;
 }
 
 .block7 {
-    background-position: -250px -125px;
+    background-position: -180px -90px;
 }
 
 .block8 {
-    background-position: -375px -125px;
+    background-position: -270px -90px;
 }
 
 .block9 {
-    background-position: 0 -250px;
+    background-position: 0 -180px;
 }
 
 .block10 {
-    background-position: -125px -250px;
+    background-position: -90px -180px;
 }
 
 .block11 {
-    background-position: -250px -250px;
+    background-position: -180px -180px;
 }
 
 .block12 {
-    background-position: -375px -250px;
+    background-position: -270px -180px;
 }
 
 .block13 {
-    background-position: 0 -375px;
+    background-position: 0 -270px;
 }
 
 .block14 {
-    background-position: -125px -375px;
+    background-position: -90px -270px;
 }
 
 .block15 {
-    background-position: -250px -375px;
+    background-position: -180px -270px;
 }
 
 .block16 {
     background: white;
     cursor: default;
+}
+
+.kind1, .kind2, .kind3, .kind4 {
+    width: 160px;
+    height: 160px;
+    background-size: contain;
+    display: table-cell;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.kind1 {
+    background-image: url(../img/lake1.jpg);
+}
+
+.kind2 {
+    background-image: url(../img/mountain1.jpg);
+}
+
+.kind3 {
+    background-image: url(../img/night1.jpg);
+}
+
+.kind4 {
+    background-image: url(../img/river1.jpg);
+}
+
+
+@media screen and (min-width: 600px) {
+    .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15, .block16 {
+        width: 125px;
+        height: 125px;
+    }
+
+    .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15 {
+        background: url(../img/mountain.jpg);
+    }
+
+    .block2 {
+        background-position: -125px 0;
+    }
+
+    .block3 {
+        background-position: -250px 0;
+    }
+
+    .block4 {
+        background-position: -375px 0;
+    }
+
+    .block5 {
+        background-position: 0 -125px;
+    }
+
+    .block6 {
+        background-position: -125px -125px;
+    }
+
+    .block7 {
+        background-position: -250px -125px;
+    }
+
+    .block8 {
+        background-position: -375px -125px;
+    }
+
+    .block9 {
+        background-position: 0 -250px;
+    }
+
+    .block10 {
+        background-position: -125px -250px;
+    }
+
+    .block11 {
+        background-position: -250px -250px;
+    }
+
+    .block12 {
+        background-position: -375px -250px;
+    }
+
+    .block13 {
+        background-position: 0 -375px;
+    }
+
+    .block14 {
+        background-position: -125px -375px;
+    }
+
+    .block15 {
+        background-position: -250px -375px;
+    }
+    .block16 {
+        background: white;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .main-puzzle, .choice-puzzle {
+        width: 50%;
+        float: left;
+    }
+    .kind1, .kind2, .kind3, .kind4 {
+        width: 220px;
+        height: 220px;
+    }
 }
