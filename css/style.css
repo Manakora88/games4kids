@@ -7,6 +7,7 @@
 body {
     background-image: url(../img/pattern.png);
     text-transform: uppercase;
+    font-family: 'Righteous', cursive;
 }
 
 /* Nagłówek */
@@ -23,6 +24,42 @@ header {
 header span {
     color: #ff9900;
 }
+
+.games {
+    margin-top: 70px;
+}
+
+.gra1, .puzzle, .gra3 {
+    width: 33.3%;
+    height: 400px;
+    margin: 0 auto;
+    float: left;
+}
+
+.gra1, .gra3 {
+    border: 2px solid black;
+}
+
+.icon {
+    background-image: url(../img/mountain.jpg);
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+}
+
+.kind_game {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #ff9900;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+
+/*Gra PUZZLE*/
 
 .main-puzzle, .choice-puzzle {
     width: 100%;
