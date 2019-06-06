@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet">
         <style>
             .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15 {
-                background-image: url(./img/mountain.jpg);
+                background-image: url(./img/river.jpg);
             }
         </style>
     </head>
@@ -51,26 +51,26 @@
                 Wybierz obrazek
             </div>
             <div id="table" class="center">
-                <div class="line1">
-                    <a href="#">
-                        <div class="kind1 checked">
-                        </div>
-                    </a>
-                    <a href="./puzzle2.html">
-                        <div class="kind2">
-                        </div>
-                    </a>
-                </div>
-                <div class="line2">
-                    <a href="./puzzle3.html">
-                        <div class="kind3">
-                        </div>
-                    </a>
-                    <a href="./puzzle4.html">
-                        <div class="kind4">
-                        </div>
-                    </a>
-                </div>
+              <div class="line1">
+                  <a href="./puzzle1.html">
+                      <div class="kind1">
+                      </div>
+                  </a>
+                  <a href="./puzzle2.html">
+                      <div class="kind2">
+                      </div>
+                  </a>
+              </div>
+              <div class="line2">
+                  <a href="./puzzle3.html">
+                      <div class="kind3">
+                      </div>
+                  </a>
+                  <a href="#">
+                      <div class="kind4 checked">
+                      </div>
+                  </a>
+              </div>
             </div>
         </section>
 
@@ -129,6 +129,18 @@
                             return;
                         }
                     }
+                }
+            }
+
+            //funkcja zmieniająca obrazki do układania
+            function choicePicture(name) {
+                var pictures = document.querySelectorAll(".picture");
+                for (var i = 0; i < pictures.length; i++) {
+                    pictures[i].addEventListener("click", function() {
+                        for (var i = 1; i <= 15; i++) {
+                            document.querySelector(".block" + [i]).style.backgroundImage = "url(./img/"+name+".jpg)";
+                        }
+                    });
                 }
             }
         </script>

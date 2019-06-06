@@ -68,9 +68,9 @@ button:hover {
     cursor: pointer;
 }
 
-.block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15 {
+/* .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15 {
     background: url(../img/mountain.jpg);
-}
+} */
 
 .block1 {
     background-position: 0 0;
@@ -146,11 +146,11 @@ button:hover {
 }
 
 .kind1 {
-    background-image: url(../img/lake.jpg);
+    background-image: url(../img/mountain.jpg);
 }
 
 .kind2 {
-    background-image: url(../img/mountain.jpg);
+    background-image: url(../img/lake.jpg);
 }
 
 .kind3 {
@@ -159,6 +159,14 @@ button:hover {
 
 .kind4 {
     background-image: url(../img/river.jpg);
+}
+
+.checked {
+    box-shadow: 0 0 10px 4px #ff9900;
+}
+
+.choice-puzzle a {
+    text-decoration: none;
 }
 
 @media screen and (min-width: 1000px) {
