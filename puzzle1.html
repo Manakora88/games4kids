@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet">
         <style>
             .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15 {
-                background-image: url(./img/mountain.jpg);
+                background-image: url(./img/mountain.png);
             }
         </style>
     </head>
@@ -18,7 +18,7 @@
             <h1>Gry dla dzieci - <span>Puzzle<span></h1>
         </header>
         <section class="main-puzzle">
-            <button class="center" onClick="mix()">Przemieszaj</button>
+            <button class="center mix" onClick="mix()">Przemieszaj</button>
             <div id="table" class="center">
                  <div id="part1">
                     <div id="square1_1" class="block6" onClick="clkBlock(1,1)"></div>
@@ -73,9 +73,13 @@
                 </div>
             </div>
         </section>
+        <a href="./index.html">
+            <button class="back" title="Wróć do wyboru gier">
+                &laquo;
+            </button>
+        </a>
 
         <script>
-
             //tworzę funkcję do zamiany poszczególnych puzzli
             function goBlocks(square1, square2) {
                 var sq = document.getElementById(square1).className;

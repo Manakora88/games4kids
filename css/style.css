@@ -41,7 +41,7 @@ header span {
 }
 
 .icon {
-    background-image: url(../img/mountain.jpg);
+    background-image: url(../img/puzzle.png);
     margin: 0 auto;
     background-size: cover;
     background-repeat: no-repeat;
@@ -58,9 +58,22 @@ header span {
     margin: 0 auto;
 }
 
-
+/*Przycisk cofania*/
+.back {
+    width: 60px;
+    height: 60px;
+    font-family: 'Righteous', cursive;
+    font-size: 40px;
+    color: grey;
+    background-color: white;
+    text-align: center;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: 99;
+    box-shadow: 5px 5px 5px grey;
+}
 /*Gra PUZZLE*/
-
 .main-puzzle, .choice-puzzle {
     width: 100%;
 }
@@ -79,7 +92,7 @@ header span {
     display: table-row;
 }
 
-button, .choice {
+.mix, .choice {
     font-family: 'Righteous', cursive;
     color: grey;
     font-size: 14px;
@@ -93,14 +106,14 @@ button {
 
 button:hover {
     background-color: #eceff1;
-    color: black;
+    color: #ff9900;
 }
 
 /* Poszczególne elementy puzzli */
 .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15, .block16 {
     display: table-cell;
-    width: 90px;
-    height: 90px;
+    width: 125px;
+    height: 125px;
     border: 2px solid white;
     cursor: pointer;
 }
@@ -110,59 +123,59 @@ button:hover {
 }
 
 .block2 {
-    background-position: -90px 0;
+    background-position: -125px 0;
 }
 
 .block3 {
-    background-position: -180px 0;
+    background-position: -250px 0;
 }
 
 .block4 {
-    background-position: -270px 0;
+    background-position: -375px 0;
 }
 
 .block5 {
-    background-position: 0 -90px;
+    background-position: 0 -125px;
 }
 
 .block6 {
-    background-position: -90px -90px;
+    background-position: -125px -125px;
 }
 
 .block7 {
-    background-position: -180px -90px;
+    background-position: -250px -125px;
 }
 
 .block8 {
-    background-position: -270px -90px;
+    background-position: -375px -125px;
 }
 
 .block9 {
-    background-position: 0 -180px;
+    background-position: 0 -250px;
 }
 
 .block10 {
-    background-position: -90px -180px;
+    background-position: -125px -250px;
 }
 
 .block11 {
-    background-position: -180px -180px;
+    background-position: -250px -250px;
 }
 
 .block12 {
-    background-position: -270px -180px;
+    background-position: -375px -250px;
 }
 
 .block13 {
-    background-position: 0 -270px;
+    background-position: 0 -375px;
 }
 
 .block14 {
-    background-position: -90px -270px;
+    background-position: -125px -375px;
 }
 
 .block15 {
-    background-position: -180px -270px;
+    background-position: -250px -375px;
 }
 
 .block16 {
@@ -170,8 +183,8 @@ button:hover {
 }
 
 .kind1, .kind2, .kind3, .kind4 {
-    width: 160px;
-    height: 160px;
+    width: 220px;
+    height: 220px;
     background-size: contain;
     display: table-cell;
     border: 2px solid white;
@@ -179,19 +192,19 @@ button:hover {
 }
 
 .kind1 {
-    background-image: url(../img/mountain.jpg);
+    background-image: url(../img/mountain.png);
 }
 
 .kind2 {
-    background-image: url(../img/lake.jpg);
+    background-image: url(../img/lake.png);
 }
 
 .kind3 {
-    background-image: url(../img/night.jpg);
+    background-image: url(../img/desert.png);
 }
 
 .kind4 {
-    background-image: url(../img/river.jpg);
+    background-image: url(../img/river.png);
 }
 
 .checked {
@@ -206,9 +219,5 @@ button:hover {
     .main-puzzle, .choice-puzzle {
         width: 50%;
         float: left;
-    }
-    .kind1, .kind2, .kind3, .kind4 {
-        width: 220px;
-        height: 220px;
     }
 }
