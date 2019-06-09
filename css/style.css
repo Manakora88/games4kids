@@ -44,11 +44,11 @@ header span {
 }
 
 .game1 {
-    background-image: url(../img/memory.png);
+    background-image: url(../img/memory/memory.png);
 }
 
 .game2 {
-    background-image: url(../img/puzzle.png);
+    background-image: url(../img/puzzle/puzzle.png);
 }
 
 .game3 {
@@ -82,6 +82,35 @@ header span {
 
 /*Gra MEMORY*/
 /*<a href="https://pl.freepik.com/darmowe-zdjecie-wektory/karykatura">Karykatura plik wektorowy utworzone przez freepik - pl.freepik.com</a>*/
+.memory {
+    width: 100%;
+}
+
+.memory-board {
+  	width: 600px;
+  	margin: 0 auto;
+  	text-align: center;
+}
+
+.cards {
+    width: 100px;
+    height: 133px;
+    margin: 5px;
+    background-image: url("../img/memory/karta.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 4px solid white;
+    display: inline-block;
+    cursor: pointer;
+    filter: brightness(70%);
+}
+
+.cards:hover {
+    filter: brightness(100%);
+    box-shadow: 0 0 10px 4px #ff9900;
+
+    transition: all .3s ease-in-out;
+}
 
 /*Gra PUZZLE*/
 .main-puzzle, .choice-puzzle {
@@ -202,19 +231,19 @@ button:hover {
 }
 
 .kind1 {
-    background-image: url(../img/mountain.png);
+    background-image: url(../img/puzzle/mountain.png);
 }
 
 .kind2 {
-    background-image: url(../img/lake.png);
+    background-image: url(../img/puzzle/lake.png);
 }
 
 .kind3 {
-    background-image: url(../img/desert.png);
+    background-image: url(../img/puzzle/desert.png);
 }
 
 .kind4 {
-    background-image: url(../img/river.png);
+    background-image: url(../img/puzzle/river.png);
 }
 
 .checked {
