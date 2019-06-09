@@ -25,6 +25,7 @@ header span {
     color: #ff9900;
 }
 
+/*Menu główne*/
 .games {
     margin-top: 70px;
 }
@@ -82,14 +83,18 @@ header span {
 
 /*Gra MEMORY*/
 /*<a href="https://pl.freepik.com/darmowe-zdjecie-wektory/karykatura">Karykatura plik wektorowy utworzone przez freepik - pl.freepik.com</a>*/
-.memory {
+.memo {
     width: 100%;
 }
 
 .memory-board {
   	width: 600px;
   	margin: 0 auto;
-  	text-align: center;
+}
+
+.memory-score {
+    margin: 0 auto;
+    text-align: center;
 }
 
 .cards {
@@ -108,7 +113,6 @@ header span {
 .cards:hover {
     filter: brightness(100%);
     box-shadow: 0 0 10px 4px #ff9900;
-
     transition: all .3s ease-in-out;
 }
 
@@ -131,11 +135,12 @@ header span {
     display: table-row;
 }
 
-.mix, .choice {
+.mix, .choice, .new-game {
     font-family: 'Righteous', cursive;
     color: grey;
     font-size: 14px;
     background-color: white;
+    text-transform: uppercase;
     padding: 5px 10px;
 }
 

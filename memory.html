@@ -11,7 +11,7 @@
         <header>
             <h1>Gry dla dzieci - <span>Memory<span></h1>
         </header>
-        <section class="memory">
+        <section class="memo">
             <div class="memory-board">
                 <div id="card1" class="cards"></div>
                 <div id="card2" class="cards"></div>
@@ -35,11 +35,11 @@
                 <div id="card20" class="cards"></div>
             </div>
             <div class="memory-score">
-                <div class="score">
+                <div id="score">
                     Liczba ruchów: 0
                 </div>
             </div>
-            <button class="center">
+            <button class="center new-game">
                 Nowa gra
             </button>
 
@@ -50,6 +50,150 @@
                 &laquo;
             </button>
         </a>
+
+        <script>
+
+            //tworzę tablicę z nazwami grafik dla odkrytych karty
+            var cards = ["bobr.png","zebra.png","pies.png","kaczka.png","mors.png","osiol.png","mors.png","krowa.png","slon.png","lew.png","kaczka.png","krowa.png","bobr.png","lew.png","pies.png","zebra.png","malpa.png","slon.png","osiol.png","malpa.png"];
+            //tworzę zmienne "trzymające" poszczególne karty
+            var card1 = document.getElementById("card1");
+            var card2 = document.getElementById("card2");
+            var card3 = document.getElementById("card3");
+            var card4 = document.getElementById("card4");
+            var card5 = document.getElementById("card5");
+            var card6 = document.getElementById("card6");
+            var card7 = document.getElementById("card7");
+            var card8 = document.getElementById("card8");
+            var card9 = document.getElementById("card9");
+            var card10 = document.getElementById("card10");
+            var card11 = document.getElementById("card11");
+            var card12 = document.getElementById("card12");
+            var card13 = document.getElementById("card13");
+            var card14 = document.getElementById("card14");
+            var card15 = document.getElementById("card15");
+            var card16 = document.getElementById("card16");
+            var card17 = document.getElementById("card17");
+            var card18 = document.getElementById("card18");
+            var card19 = document.getElementById("card19");
+            var card20 = document.getElementById("card20");
+
+            var block= false;
+            var visib = false;
+            var left = 10;
+            var counter = 0;
+            var vNumber;
+
+            //tworzę funkcję do odkrywania kart
+            function uncoverCard(number) {
+                var opac = document.getElementById("card"+number).getAttribute("opacity");
+
+                if (opac != 0 && block== false) {
+                    block= true;
+                    var pic = "url(./img/memory/" + cards[number + 1] + ")";
+                    document.getElementById("card" + number).style.backgroundImage = pic;
+
+                    if (visib == false) {
+                        //pierwsza karta
+                        visib = true;
+                        vNumber = number;
+                        block= false;
+                    } else {
+                        //druga karta
+                        if (cards[vNumber] == cards[number]) { //gdy odkryte karty tworzą parę
+                            setTimeout(function() {
+                                goodCards(number, vNumber)
+                            }, 500);
+                        } else { //gdy odkryte karty nie są parą
+                            setTimeout(function() {
+                                wrongCards(number, vNumber)
+                            }, 500);
+                        }
+                        counter++;
+                        document.getElementById("score").html('Liczba ruchów: ' + counter);
+                        visib = false;
+                    }
+                }
+            }
+
+            //tworzę funkcję do zakrywania źle wybranych kart
+            function goodCards(numb1, numb2) {
+                document.getElementById("card" + numb1).setAttribute("opacity", "0");
+                document.getElementById("card" + numb2).setAttribute("opacity", "0");
+                left--;
+                if (left == 0) {
+                    document.querySelector(".memory-board").html("Zwycięstwo dokonane w " + counter + " ruchach");
+                }
+                block= false;
+            }
+
+            //tworzę funkcję do zakrywania niedobranych kart
+            function wrongCards(numb1, numb2) {
+                document.getElementById("card" + numb1).style.backgroundImage = "url(./img/memory/karta.png)";
+                document.getElementById("card" + numb2).style.backgroundImage = "url(./img/memory/karta.png)";
+                block= false;
+            }
+
+            card1.addEventListener("click", function() {
+                uncoverCard(1);
+            });
+            card2.addEventListener("click", function() {
+                uncoverCard(2);
+            });
+            card3.addEventListener("click", function() {
+                uncoverCard(3);
+            });
+            card4.addEventListener("click", function() {
+                uncoverCard(4);
+            });
+            card5.addEventListener("click", function() {
+                uncoverCard(5);
+            });
+            card6.addEventListener("click", function() {
+                uncoverCard(6);
+            });
+            card7.addEventListener("click", function() {
+                uncoverCard(7);
+            });
+            card8.addEventListener("click", function() {
+                uncoverCard(8);
+            });
+            card9.addEventListener("click", function() {
+                uncoverCard(9);
+            });
+            card10.addEventListener("click", function() {
+                uncoverCard(10);
+            });
+            card11.addEventListener("click", function() {
+                uncoverCard(11);
+            });
+            card12.addEventListener("click", function() {
+                uncoverCard(12);
+            });
+            card13.addEventListener("click", function() {
+                uncoverCard(13);
+            });
+            card14.addEventListener("click", function() {
+                uncoverCard(14);
+            });
+            card15.addEventListener("click", function() {
+                uncoverCard(15);
+            });
+            card16.addEventListener("click", function() {
+                uncoverCard(16);
+            });
+            card17.addEventListener("click", function() {
+                uncoverCard(17);
+            });
+            card18.addEventListener("click", function() {
+                uncoverCard(18);
+            });
+            card19.addEventListener("click", function() {
+                uncoverCard(19);
+            });
+            card20.addEventListener("click", function() {
+                uncoverCard(20);
+            });
+        </script>
     </body>
 
 </html>
