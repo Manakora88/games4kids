@@ -116,6 +116,10 @@ header span {
     transition: all .3s ease-in-out;
 }
 
+.activeCard {
+    filter: brightness(100%);
+}
+
 /*Gra PUZZLE*/
 .main-puzzle, .choice-puzzle {
     width: 100%;
