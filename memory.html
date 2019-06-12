@@ -77,7 +77,7 @@
             var card18 = document.getElementById("card18");
             var card19 = document.getElementById("card19");
 
-            var stop = false; //zablokowanie odkrywania pozostalych kart, do czasu, aż dwie wcześniej odkryte znów się zasłonią lub znikną, gdy tworzą one parę
+            var stop = false; //zablokowanie odkrywania pozostalych kart do czasu, aż dwie wcześniej odkryte znów się zasłonią lub znikną, gdy tworzą one parę
             var visible1 = false; //gdy false to odsłaniamy pierwszą kartę, gdy true - pierwsza karta jest już widoczna i odsłaniamy drugą
             var visible1_index; //indeks odsłoniętej pierwszej karty
             var left = 10; //ile zostało par do znalezienia
@@ -96,7 +96,7 @@
 
             //funkcja do odkrywania kart
             function uncoverCard(number) {
-                var opac = document.getElementById("card"+number).getAttribute("opacity");
+                var opac = document.getElementById("card"+number).style.opacity.value;
 
                 if (opac != 0 && stop == false) { //jeśli karta nie zniknęła po sparowaniu (czyli jest widoczna) i nie ma blokady odkrywania karty (czyli jeszcze nie są odkryte dwie karty)
                     stop = true;
@@ -126,8 +126,8 @@
 
             //funkcja do znikania sparowanych kart
             function goodCards(numb1, numb2) {
-                document.getElementById("card" + numb1).setAttribute("opacity", "0");
-                document.getElementById("card" + numb2).setAttribute("opacity", "0");
+                document.getElementById("card" + numb1).style.opacity = "0";
+                document.getElementById("card" + numb2).style.opacity = "0";
                 left--;
                 if (left == 0) {
                     document.querySelector(".memory-board").innerHTML = "Zwycięstwo dokonane w " + counter + " ruchach";
@@ -144,6 +144,7 @@
                 stop = false;
             }
 
+            //dodaję zdarzenia do kliknięć w poszczególne karty
             card0.addEventListener("click", function() {
                 uncoverCard(0);
                 this.classList.add("activeCard");
