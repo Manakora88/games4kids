@@ -96,8 +96,8 @@
 
             //funkcja do odkrywania kart
             function uncoverCard(number) {
-                var opac = document.getElementById("card"+number).style.opacity.value;
-
+                var cardd = document.getElementById("card"+number);
+                var opac = window.getComputedStyle(cardd,null).getPropertyValue('opacity');
                 if (opac != 0 && stop == false) { //jeśli karta nie zniknęła po sparowaniu (czyli jest widoczna) i nie ma blokady odkrywania karty (czyli jeszcze nie są odkryte dwie karty)
                     stop = true;
                     document.getElementById("card" + number).style.backgroundImage = "url(./img/memory/" + cards[number] + ")";
