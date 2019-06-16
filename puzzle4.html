@@ -14,70 +14,69 @@
     </head>
 
     <body>
-        <header>
-            <h1>Gry dla dzieci - <span>Puzzle<span></h1>
-        </header>
-        <section class="main-puzzle">
-            <button class="center mix" onClick="mix()">Przemieszaj</button>
-            <div id="table" class="center">
-                <div id="part1">
-                   <div id="square1_1" class="block10" onClick="clkBlock(1,1)"></div>
-                   <div id="square1_2" class="block13" onClick="clkBlock(1,2)"></div>
-                   <div id="square1_3" class="block6" onClick="clkBlock(1,3)"></div>
-                   <div id="square1_4" class="block8" onClick="clkBlock(1,4)"></div>
+        <main class="game-puzzle">
+            <section class="main-puzzle">
+                <button class="center mix" onClick="mix()">Przemieszaj</button>
+                <div id="table" class="center">
+                    <div id="part1">
+                       <div id="square1_1" class="block10" onClick="clkBlock(1,1)"></div>
+                       <div id="square1_2" class="block13" onClick="clkBlock(1,2)"></div>
+                       <div id="square1_3" class="block6" onClick="clkBlock(1,3)"></div>
+                       <div id="square1_4" class="block8" onClick="clkBlock(1,4)"></div>
+                    </div>
+                    <div id="part2">
+                       <div id="square2_1" class="block4" onClick="clkBlock(2,1)"></div>
+                       <div id="square2_2" class="block3" onClick="clkBlock(2,2)"></div>
+                       <div id="square2_3" class="block7" onClick="clkBlock(2,3)"></div>
+                       <div id="square2_4" class="block5" onClick="clkBlock(2,4)"></div>
+                    </div>
+                    <div id="part3">
+                       <div id="square3_1" class="block2" onClick="clkBlock(3,1)"></div>
+                       <div id="square3_2" class="block12" onClick="clkBlock(3,2)"></div>
+                       <div id="square3_3" class="block15" onClick="clkBlock(3,3)"></div>
+                       <div id="square3_4" class="block1" onClick="clkBlock(3,4)"></div>
+                    </div>
+                    <div id="part4">
+                       <div id="square4_1" class="block14" onClick="clkBlock(4,1)"></div>
+                       <div id="square4_2" class="block9" onClick="clkBlock(4,2)"></div>
+                       <div id="square4_3" class="block11" onClick="clkBlock(4,3)"></div>
+                       <div id="square4_4" class="block16" onClick="clkBlock(4,4)"></div>
+                    </div>
                 </div>
-                <div id="part2">
-                   <div id="square2_1" class="block4" onClick="clkBlock(2,1)"></div>
-                   <div id="square2_2" class="block3" onClick="clkBlock(2,2)"></div>
-                   <div id="square2_3" class="block7" onClick="clkBlock(2,3)"></div>
-                   <div id="square2_4" class="block5" onClick="clkBlock(2,4)"></div>
+            </section>
+            <section class="choice-puzzle">
+                <div class="center choice">
+                    Wybierz obrazek
                 </div>
-                <div id="part3">
-                   <div id="square3_1" class="block2" onClick="clkBlock(3,1)"></div>
-                   <div id="square3_2" class="block12" onClick="clkBlock(3,2)"></div>
-                   <div id="square3_3" class="block15" onClick="clkBlock(3,3)"></div>
-                   <div id="square3_4" class="block1" onClick="clkBlock(3,4)"></div>
+                <div id="table" class="center">
+                  <div class="line1">
+                      <a href="./puzzle1.html">
+                          <div class="kind1">
+                          </div>
+                      </a>
+                      <a href="./puzzle2.html">
+                          <div class="kind2">
+                          </div>
+                      </a>
+                  </div>
+                  <div class="line2">
+                      <a href="./puzzle3.html">
+                          <div class="kind3">
+                          </div>
+                      </a>
+                      <a href="#">
+                          <div class="kind4 checked">
+                          </div>
+                      </a>
+                  </div>
                 </div>
-                <div id="part4">
-                   <div id="square4_1" class="block14" onClick="clkBlock(4,1)"></div>
-                   <div id="square4_2" class="block9" onClick="clkBlock(4,2)"></div>
-                   <div id="square4_3" class="block11" onClick="clkBlock(4,3)"></div>
-                   <div id="square4_4" class="block16" onClick="clkBlock(4,4)"></div>
-                </div>
-            </div>
-        </section>
-        <section class="choice-puzzle">
-            <div class="center choice">
-                Wybierz obrazek
-            </div>
-            <div id="table" class="center">
-              <div class="line1">
-                  <a href="./puzzle1.html">
-                      <div class="kind1">
-                      </div>
-                  </a>
-                  <a href="./puzzle2.html">
-                      <div class="kind2">
-                      </div>
-                  </a>
-              </div>
-              <div class="line2">
-                  <a href="./puzzle3.html">
-                      <div class="kind3">
-                      </div>
-                  </a>
-                  <a href="#">
-                      <div class="kind4 checked">
-                      </div>
-                  </a>
-              </div>
-            </div>
-        </section>
-        <a href="./index.html">
-            <button class="back" title="Wróć do wyboru gier">
-                &laquo;
-            </button>
-        </a>
+            </section>
+            <a href="./index.html">
+                <button class="back" title="Wróć do wyboru gier">
+                    &laquo;
+                </button>
+            </a>
+        </main>
 
         <script>
 

@@ -8,9 +8,6 @@
     </head>
 
     <body>
-        <header>
-            <h1>Gry dla dzieci - <span>Memory<span></h1>
-        </header>
         <section class="memo">
             <div class="memory-board">
                 <div id="card0" class="cards"></div>
@@ -39,10 +36,11 @@
                     Liczba ruchów: 0
                 </div>
             </div>
-            <button class="center new-game">
-                Nowa gra
-            </button>
-
+            <a href="./memory.html">
+                <button class="center new-game">
+                    Nowa gra
+                </button>
+            </a>
         </section>
 
         <a href="./index.html">
@@ -55,6 +53,7 @@
 
             //tworzę tablicę z nazwami grafik dla odkrytych kart
             var cards = ["bobr.png","zebra.png","pies.png","kaczka.png","mors.png","osiol.png","mors.png","krowa.png","slon.png","lew.png","kaczka.png","krowa.png","bobr.png","lew.png","pies.png","zebra.png","malpa.png","slon.png","osiol.png","malpa.png"];
+
             //tworzę zmienne "trzymające" poszczególne karty
             var card0 = document.getElementById("card0");
             var card1 = document.getElementById("card1");
@@ -83,16 +82,8 @@
             var left = 10; //ile zostało par do znalezienia
             var counter = 0; //licznik wykonanych ruchów
 
-            // //funkcja do mieszania kart
-            // function mixCards() {
-            //     for (var i = 1; i <= 20; i++) {
-            //         var cardd = document.getElementById("card" + Math.floor(Math.random()*20 + 1)
-            //
-            //
-            //             goBlocks("square" + row + "_" + col, "square" + roww + "_" + coll);
-            //
-            //     }
-            // }
+            //funkcja do wystartowania nowej gry
+
 
             //funkcja do odkrywania kart
             function uncoverCard(number) {
@@ -130,7 +121,7 @@
                 document.getElementById("card" + numb2).style.opacity = "0";
                 left--;
                 if (left == 0) {
-                    document.querySelector(".memory-board").innerHTML = "Zwycięstwo dokonane w " + counter + " ruchach";
+                    document.querySelector(".memory-board").innerHTML = "<p>Brawo! Udało Ci się zwyciężyć w <span>" + counter + "</span> ruchach</p>";
                 }
                 stop = false;
             }
@@ -225,6 +216,12 @@
                 uncoverCard(19);
                 this.classList.add("activeCard");
             });
+
+            //wgranie nowej gry
+            var btn = document.querySelector(".new-game");
+            btn.addEventListener("click", function(cards,i) {
+                for (i = cards.length; i; cards.push(cards.splice(~~(Math.random()*(i--)),1)));
+            })
         </script>
     </body>
 

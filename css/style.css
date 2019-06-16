@@ -75,7 +75,7 @@ header span {
     background-color: white;
     text-align: center;
     position: fixed;
-    top: 80px;
+    top: 0;
     left: 0;
     z-index: 99;
     box-shadow: 5px 5px 5px grey;
@@ -85,6 +85,9 @@ header span {
 /*<a href="https://pl.freepik.com/darmowe-zdjecie-wektory/karykatura">Karykatura plik wektorowy utworzone przez freepik - pl.freepik.com</a>*/
 .memo {
     width: 100%;
+    background-image: url(../img/memory/pattern-memory.png);
+    background-size: contain;
+    padding: 20px 0;
 }
 
 .memory-board {
@@ -93,6 +96,17 @@ header span {
   	margin: 0 auto;
     text-align: center;
     font-size: 50px;
+    display: table;
+}
+
+.memory-board p {
+    vertical-align: middle;
+    display: table-cell;
+    margin: 0 auto;
+}
+
+.memory-board span {
+    color: #ff9900;
 }
 
 .memory-score {
@@ -122,7 +136,18 @@ header span {
     filter: brightness(100%);
 }
 
+.memo a {
+    text-decoration: none;
+    color: grey;
+}
+
 /*Gra PUZZLE*/
+.game-puzzle {
+  width: 100%;
+  background-image: url(../img/puzzle/pattern-puzzle.png);
+  background-size: contain;
+  height: 100vh;
+}
 .main-puzzle, .choice-puzzle {
     width: 100%;
 }
