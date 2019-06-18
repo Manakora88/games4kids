@@ -71,8 +71,8 @@ header span {
     height: 60px;
     font-family: 'Righteous', cursive;
     font-size: 40px;
-    color: grey;
-    background-color: white;
+    color: white;
+    background-color: lightgrey;
     text-align: center;
     position: fixed;
     top: 0;
@@ -85,6 +85,7 @@ header span {
 /*<a href="https://pl.freepik.com/darmowe-zdjecie-wektory/karykatura">Karykatura plik wektorowy utworzone przez freepik - pl.freepik.com</a>*/
 .memo {
     width: 100%;
+    height: 100%;
     background-image: url(../img/memory/pattern-memory.png);
     background-size: contain;
     padding: 20px 0;
@@ -103,6 +104,7 @@ header span {
     vertical-align: middle;
     display: table-cell;
     margin: 0 auto;
+    padding: 50px 0;
 }
 
 .memory-board span {
@@ -138,7 +140,22 @@ header span {
 
 .memo a {
     text-decoration: none;
-    color: grey;
+}
+
+.new-game {
+    font-family: 'Righteous', cursive;
+    color: white;
+    font-size: 20px;
+    padding: 0 20px;
+    background-color: lightgrey;
+    text-transform: uppercase;
+    line-height: 60px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 5px 5px 5px grey;
 }
 
 /*Gra PUZZLE*/
@@ -166,13 +183,13 @@ header span {
     display: table-row;
 }
 
-.mix, .choice, .new-game {
+.mix, .choice {
     font-family: 'Righteous', cursive;
-    color: grey;
-    font-size: 14px;
-    background-color: white;
+    color: white;
+    font-size: 20px;
+    background-color: lightgrey;
     text-transform: uppercase;
-    padding: 5px 10px;
+    padding: 10px 20px;
 }
 
 button {
@@ -180,8 +197,8 @@ button {
 }
 
 button:hover {
-    background-color: #eceff1;
-    color: #ff9900;
+    background-color: grey;
+    color: #ffe85f;
 }
 
 /* Poszczególne elementy puzzli */

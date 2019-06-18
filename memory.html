@@ -37,7 +37,7 @@
                 </div>
             </div>
             <a href="./memory.html">
-                <button class="center new-game">
+                <button class="new-game" onclick="mixArray(cards)">
                     Nowa gra
                 </button>
             </a>
@@ -51,10 +51,10 @@
 
         <script>
 
-            //tworzę tablicę z nazwami grafik dla odkrytych kart
-            var cards = ["bobr.png","zebra.png","pies.png","kaczka.png","mors.png","osiol.png","mors.png","krowa.png","slon.png","lew.png","kaczka.png","krowa.png","bobr.png","lew.png","pies.png","zebra.png","malpa.png","slon.png","osiol.png","malpa.png"];
+            //tablica z nazwami grafik dla odkrytych kart
+            var cardsList = ["bobr.png","zebra.png","pies.png","kaczka.png","mors.png","osiol.png","mors.png","krowa.png","slon.png","lew.png","kaczka.png","krowa.png","bobr.png","lew.png","pies.png","zebra.png","malpa.png","slon.png","osiol.png","malpa.png"];
 
-            //tworzę zmienne "trzymające" poszczególne karty
+            //zmienne "trzymające" poszczególne karty
             var card0 = document.getElementById("card0");
             var card1 = document.getElementById("card1");
             var card2 = document.getElementById("card2");
@@ -76,14 +76,31 @@
             var card18 = document.getElementById("card18");
             var card19 = document.getElementById("card19");
 
+            //pozostałe zmienne
             var stop = false; //zablokowanie odkrywania pozostalych kart do czasu, aż dwie wcześniej odkryte znów się zasłonią lub znikną, gdy tworzą one parę
             var visible1 = false; //gdy false to odsłaniamy pierwszą kartę, gdy true - pierwsza karta jest już widoczna i odsłaniamy drugą
             var visible1_index; //indeks odsłoniętej pierwszej karty
             var left = 10; //ile zostało par do znalezienia
             var counter = 0; //licznik wykonanych ruchów
+            var cards = []; //tablica na przemieszane karty
 
-            //funkcja do wystartowania nowej gry
-
+            //funkcja do przemieszania kart
+            function mixArray(cardsList) {
+                for (var i = cardsList.length; i >= 0; i--) {
+                    var f = Math.floor(Math.random()*(i+1));
+                    for (var j = 0, k = 0; j < cardsList.length; j++) {
+                        if (cards[j] === undefined) {
+                            if (k === f) {
+                                cards[j] = cardsList[i];
+                                break;
+                            }
+                            k++;
+                        }
+                    }
+                }
+                return cards;
+            }
+            mixArray(cardsList);
 
             //funkcja do odkrywania kart
             function uncoverCard(number) {
@@ -135,7 +152,7 @@
                 stop = false;
             }
 
-            //dodaję zdarzenia do kliknięć w poszczególne karty
+            //zdarzenia do klikanej karty
             card0.addEventListener("click", function() {
                 uncoverCard(0);
                 this.classList.add("activeCard");
