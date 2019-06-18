@@ -8,51 +8,52 @@
     </head>
 
     <body>
-        <section class="memo">
-            <div class="memory-board">
-                <div id="card0" class="cards"></div>
-                <div id="card1" class="cards"></div>
-                <div id="card2" class="cards"></div>
-                <div id="card3" class="cards"></div>
-                <div id="card4" class="cards"></div>
-                <div id="card5" class="cards"></div>
-                <div id="card6" class="cards"></div>
-                <div id="card7" class="cards"></div>
-                <div id="card8" class="cards"></div>
-                <div id="card9" class="cards"></div>
-                <div id="card10" class="cards"></div>
-                <div id="card11" class="cards"></div>
-                <div id="card12" class="cards"></div>
-                <div id="card13" class="cards"></div>
-                <div id="card14" class="cards"></div>
-                <div id="card15" class="cards"></div>
-                <div id="card16" class="cards"></div>
-                <div id="card17" class="cards"></div>
-                <div id="card18" class="cards"></div>
-                <div id="card19" class="cards"></div>
-            </div>
-            <div class="memory-score">
-                <div id="score">
-                    Liczba ruchów: 0
+        <main class="game-memory">
+            <section class="memo">
+                <div class="memory-board">
+                    <div id="card0" class="cards"></div>
+                    <div id="card1" class="cards"></div>
+                    <div id="card2" class="cards"></div>
+                    <div id="card3" class="cards"></div>
+                    <div id="card4" class="cards"></div>
+                    <div id="card5" class="cards"></div>
+                    <div id="card6" class="cards"></div>
+                    <div id="card7" class="cards"></div>
+                    <div id="card8" class="cards"></div>
+                    <div id="card9" class="cards"></div>
+                    <div id="card10" class="cards"></div>
+                    <div id="card11" class="cards"></div>
+                    <div id="card12" class="cards"></div>
+                    <div id="card13" class="cards"></div>
+                    <div id="card14" class="cards"></div>
+                    <div id="card15" class="cards"></div>
+                    <div id="card16" class="cards"></div>
+                    <div id="card17" class="cards"></div>
+                    <div id="card18" class="cards"></div>
+                    <div id="card19" class="cards"></div>
                 </div>
-            </div>
-            <a href="./memory.html">
-                <button class="new-game" onclick="mixArray(cards)" title="Wczytaj nową grę">
-                    Nowa gra
+                <div class="memory-score">
+                    <div id="score">
+                        Liczba ruchów: 0
+                    </div>
+                </div>
+                <a href="./memory.html">
+                    <button class="new-game" onclick="mixArray(cards)" title="Wczytaj nową grę">
+                        Nowa gra
+                    </button>
+                </a>
+                <div class="freepik">
+                    <a href="https://pl.freepik.com/darmowe-zdjecie-wektory/karykatura">
+                        Grafiki wykorzystane w grze to plik wektorowy utworzony przez freepik - pl.freepik.com
+                    </a>
+                </div>
+            </section>
+            <a href="./index.html">
+                <button class="back" title="Wróć do wyboru gier">
+                    Wróć
                 </button>
             </a>
-            <div class="freepik">
-                <a href="https://pl.freepik.com/darmowe-zdjecie-wektory/karykatura">
-                    Grafiki wykorzystane w grze to plik wektorowy utworzony przez freepik - pl.freepik.com
-                </a>
-            </div>
-        </section>
-
-        <a href="./index.html">
-            <button class="back" title="Wróć do wyboru gier">
-                Wróć
-            </button>
-        </a>
+        </main>
 
         <script>
             //tablica z nazwami grafik dla odkrytych kart
