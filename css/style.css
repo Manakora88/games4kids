@@ -16,6 +16,7 @@ header {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 5px;
+    font-size: 30px;
     margin: 30px 0;
     color: #ffc400;
     text-shadow: 5px 5px 5px lightgrey;
@@ -23,6 +24,11 @@ header {
 
 header span {
     color: #ff9900;
+}
+
+@media screen and (min-width: 1000px) {
+    header h1 {
+    }
 }
 
 /*Menu główne*/
@@ -52,7 +58,7 @@ header span {
 }
 
 .game3 {
-    border: 2px solid black;
+    border: 2px solid grey;
 }
 
 .kind_game {
@@ -78,7 +84,7 @@ header span {
     font-family: 'Righteous', cursive;
     font-size: 20px;
     padding: 0 20px;
-    color: white;
+    color: grey;
     background-color: lightgrey;
     text-align: center;
     text-transform: uppercase;
@@ -102,11 +108,12 @@ header span {
 
 .memory-board {
   	width: 700px;
-    height: 630px;
+    height: 100%;
   	margin: 0 auto;
     text-align: center;
     font-size: 50px;
     display: table;
+    vertical-align: middle;
 }
 
 .memory-board p {
@@ -192,7 +199,7 @@ header span {
 
 .mix, .choice {
     font-family: 'Righteous', cursive;
-    color: white;
+    color: grey;
     font-size: 20px;
     background-color: lightgrey;
     text-transform: uppercase;
