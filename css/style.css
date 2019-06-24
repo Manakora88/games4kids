@@ -8,6 +8,7 @@ body {
     background-image: url(../img/pattern.png);
     text-transform: uppercase;
     font-family: 'Righteous', cursive;
+    height: 100vh;
 }
 
 /* Nagłówek */
@@ -106,6 +107,13 @@ header span {
     padding: 20px 0 5px 0;
 }
 
+.memo {
+    height: 100vh;
+    width: 100vw;
+    vertical-align: middle;
+    display: table-cell;
+}
+
 .memory-board {
   	width: 700px;
     height: 630px;
@@ -163,9 +171,10 @@ header span {
     right: 0;
 }
 
-.freepik a {
+.graphics a {
+    text-decoration: none;
     text-align: center;
-    margin: 10px auto 0 auto;
+    margin: 10px auto 5px auto;
     display: table;
     font-size: 12px;
     color: grey;
@@ -182,8 +191,13 @@ header span {
     width: 100%;
 }
 
-#table {
-    border: 2px solid white;
+.choice-puzzle {
+    padding-top: 30px;
+}
+
+.table  {
+    display: table;
+    margin: 20px auto;
 }
 
 .center {
@@ -326,8 +340,17 @@ button:hover {
 }
 
 @media screen and (min-width: 1000px) {
+    .game-puzzle {
+        height: 100vh;
+        vertical-align: middle;
+        display: table-cell;
+        width: 100vw;
+    }
     .main-puzzle, .choice-puzzle {
         width: 50%;
         float: left;
+    }
+    .choice-puzzle {
+        padding-top: 0;
     }
 }
