@@ -105,10 +105,12 @@ header span {
     background-image: url(../img/memory/pattern-memory.png);
     background-size: contain;
     padding: 20px 0 5px 0;
+    display: table;
+    height: 100%;
 }
 
 .memo {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     vertical-align: middle;
     display: table-cell;
@@ -140,9 +142,9 @@ header span {
 }
 
 .cards {
-    width: 100px;
-    height: 133px;
-    margin: 5px;
+    width: 13%;
+    height: 2.5em;
+    margin: 2px;
     background-image: url("../img/memory/karta.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -178,6 +180,13 @@ header span {
     display: table;
     font-size: 12px;
     color: grey;
+}
+
+@media screen and (min-width: 1000px) {
+    .cards {
+        width: 100px;
+        height: 133px;
+        margin: 5px;
 }
 
 /*Gra PUZZLE*/
