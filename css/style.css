@@ -118,7 +118,7 @@ header span {
 
 .memory-board {
   	width: 100vw;
-    height: 630px;
+    height: 80px;
   	margin: 0 auto;
     text-align: center;
     font-size: 50px;
@@ -143,8 +143,7 @@ header span {
 
 .cards {
     width: 15%;
-    min-height: 133px;
-    max-height: 150px;
+    height: 180px;
     margin: 1px 3px;
     background-image: url("../img/memory/karta.png");
     background-size: cover;
