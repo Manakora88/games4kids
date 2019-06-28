@@ -114,7 +114,7 @@ header span {
 }
 
 .game-memory {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-image: url(../img/memory/pattern-memory.png);
     background-size: contain;
@@ -124,14 +124,14 @@ header span {
 
 .memo {
     height: 100%;
-    width: 100vw;
+    width: 100%;
     vertical-align: middle;
     display: table-cell;
 }
 
 .memory-board {
   	width: 100vw;
-    height: 800px;
+    height: 1000px;
   	margin: 0 auto;
     text-align: center;
     font-size: 50px;
@@ -149,15 +149,20 @@ header span {
     color: #ff9900;
 }
 
+.cardsLine {
+    width: 100%;
+    height: 25%;
+}
+
 .memory-score {
     margin: 0 auto;
     text-align: center;
 }
 
 .cards {
-    width: 15%;
-    height: 180px;
-    margin: 1px 3px;
+    width: 16%;
+    height: 200px;
+    padding: 1px;
     background-image: url("../img/memory/karta.png");
     background-size: cover;
     background-position: center;
