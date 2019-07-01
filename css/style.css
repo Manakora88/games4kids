@@ -117,7 +117,6 @@ header span {
     width: 100vw;
     height: 100vh;
     background-image: url(../img/memory/pattern-memory.png);
-    background-size: contain;
     padding: 20px 0 5px 0;
     display: table;
 }
@@ -226,7 +225,6 @@ header span {
 .game-puzzle {
     width: 100%;
     background-image: url(../img/puzzle/pattern-puzzle.png);
-    background-size: contain;
     height: 100vh;
 }
 .main-puzzle, .choice-puzzle {
@@ -401,6 +399,5 @@ button:hover {
 .game-penguin {
     width: 100%;
     background-image: url(../img/penguin/pattern-penguin.png);
-    background-size: contain;
     height: 100vh;
 }
