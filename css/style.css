@@ -424,3 +424,15 @@ button:hover {
     padding: 1px;
     border: 2px solid grey;
 }
+
+.penguin {
+  background-image: url('../img/penguin/penguin-player.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fish {
+  background-image: url('../img/penguin/fish.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

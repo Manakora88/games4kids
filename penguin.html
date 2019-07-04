@@ -124,5 +124,102 @@
                 </button>
             </a>
         </main>
+
+        <script>
+            //konstruktor "Penguin"
+            function Penguin() {
+                this.x = 0;
+                this.y = 0;
+                this.direction = "right";
+            }
+
+            //konstruktor "Fish"
+            function Fish() {
+                this.x = Math.floor(Math.random() * 10);
+                this.y = Math.floor(Math.random() * 10);
+            }
+
+            //konstruktor "Game"
+            function Game() {
+                var self = this;
+                this.board = document.querySelectorAll(".penguin-board > div");
+                this.penguin = new Penguin();
+                this.fish = new Fish();
+                this.score = 0;
+                this.index = function(x,y) {
+                  return x + (y * 10);
+                }
+                //metoda, która pokaże Pingwina w divie o pozycji x i y Pingwina, poprzez nadanie temu divowi klasy "penguin"
+                this.showPenguin = function() {
+                    this.board[this.index(this.penguin.x,this.penguin.y)].classList.add('penguin');
+                }
+                //metoda, która pokaże rybę w divie o pozycji x i y ryby, poprzez nadanie temu divowi klasy "fish"
+                this.showFish = function() {
+                    this.board[this.index(this.fish.x,this.fish.y)].classList.add('fish');
+                }
+                //metoda startGame
+                this.startGame = function() {
+                    //wprowadzam zmienną self, zeby wewnątrz eventu móc użyć "this", które będzie odnosiło się do obiektu, a nie do eventu
+                    this.idSetInterval = setInterval(function(){
+                        self.movePenguin();
+                    }, 250);
+                }
+                //metoda dotycząca poruszania się Pingwina
+                this.movePenguin = function(){
+                    if (self.penguin.direction === "right") {
+                        self.penguin.x = this.penguin.x + 1;
+                    } else if (self.penguin.direction === "left") {
+                        self.penguin.x = this.penguin.x - 1;
+                    } else if (self.penguin.direction === "up") {
+                        self.penguin.y = this.penguin.y - 1;
+                    } else if (self.penguin.direction === "down"){
+                        self.penguin.y = this.penguin.y + 1;
+                    }
+                    self.checkFishCollision();
+                    self.gameOver();
+                    self.hideVisiblePenguin();
+                    self.showPenguin();
+                }
+                //metoda ukrywająca starą pozycję Pingwina
+                this.hideVisiblePenduin = function() {
+                    document.querySelector(".penguin").classList.remove('penguin');
+                }
+                //metoda obsługująca klawiaturę
+                this.turnPenguin = function(event) {
+                    switch (event.which) {
+                        case 37:
+                            self.penguin.direction = "left";
+                            break;
+                        case 38:
+                            self.penguin.direction = "up";
+                            break;
+                        case 39:
+                            self.penguin.direction = "right";
+                            break;
+                        case 40:
+                            self.penguin.direction = "down";
+                            break;
+                    }
+                }
+                //metoda kolizji Pingwina z rybą
+                this.checkFishCollision = function() {
+                    if (this.penguin.x == this.fish.x && this.fish.y == this.penguin.y) {
+                        document.querySelector(".fish").classList.remove("fish");
+                        this.score++;
+                        document.querySelector(".points strong").innerText = this.score;
+                        this.fish = new Fish();
+                        this.showFish();
+                    }
+                }
+                //metoda kolizji Pingwina ze ścianą
+                this.gameOver = function() {
+                    if (this.penguin.x < 0 || this.penguin.x > 9 || this.penguin.y < 0 || this.penguin.y > 9) {
+                        clearInterval(this.idSetInterval);
+                        this.hideVisiblePenguin();
+                        alert("Koniec gry! Twój wynik punktowy to " + this.score + "!!!");
+                    }
+                }
+            }
+        </script>
     </body>
 </html>
