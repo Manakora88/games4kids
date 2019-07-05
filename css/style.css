@@ -426,13 +426,37 @@ button:hover {
 }
 
 .penguinPlayer {
-  background-image: url('../img/penguin/penguin-player.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url('../img/penguin/penguin-player.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .fish {
-  background-image: url('../img/penguin/fish.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url('../img/penguin/fish.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.arrows {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.small {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    float: left;
+    text-align: center;
+}
+
+.hide {
+    background-color: rgba(255,255,255,0);
+}
+
+.up, .left, .right, .down {
+    border: 2px solid grey;
+    box-shadow: 5px 5px 5px grey;
+    cursor: pointer;
 }
