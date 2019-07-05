@@ -128,7 +128,7 @@ header span {
     display: table-cell;
 }
 
-.memory-board {
+.memory-board, .penguin-board {
   	width: 100vw;
     height: 1000px;
   	margin: 0 auto;
@@ -137,14 +137,14 @@ header span {
     display: table;
 }
 
-.memory-board p {
+.memory-board p, .penguin-board p {
     vertical-align: middle;
     display: table-cell;
     margin: 0 auto;
     padding: 50px 0;
 }
 
-.memory-board span {
+.memory-board span, .penguin-board span {
     color: #ff9900;
 }
 
@@ -425,7 +425,7 @@ button:hover {
     border: 2px solid grey;
 }
 
-.penguin {
+.penguinPlayer {
   background-image: url('../img/penguin/penguin-player.png');
   background-repeat: no-repeat;
   background-size: cover;
