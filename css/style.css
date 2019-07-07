@@ -34,7 +34,7 @@ header span {
 
 /*Menu główne*/
 .games {
-    margin-top: 70px;
+    padding-top: 70px;
 }
 
 .memory, .puzzle, .penguin {
@@ -71,7 +71,21 @@ header span {
     margin: 0 auto;
 }
 
+.graphics {
+    text-align: center;
+    font-size: 12px;
+    color: grey;
+}
+
+.graphics a {
+    text-decoration: none;
+    color: grey;
+}
+
 @media screen and (min-width: 1000px) {
+    .games {
+        height: 470px;
+    }
     .memory, .puzzle, .penguin {
         width: 33.3%;
         height: 400px;
@@ -117,7 +131,7 @@ header span {
     width: 100vw;
     height: 100vh;
     background-image: url(../img/memory/pattern-memory.png);
-    padding: 20px 0 5px 0;
+    padding: 5px 0;
     display: table;
 }
 
@@ -130,7 +144,6 @@ header span {
 
 .memory-board, .penguin-board {
   	width: 100vw;
-    height: 1000px;
   	margin: 0 auto;
     text-align: center;
     font-size: 50px;
@@ -191,19 +204,6 @@ header span {
     right: 0;
 }
 
-.graphics {
-    text-align: center;
-    margin: 3px auto;
-    display: table;
-    font-size: 12px;
-    color: grey;
-}
-
-.graphics a {
-    text-decoration: none;
-    color: grey;
-}
-
 @media screen and (min-width: 750px) {
     .memory-board {
         width: 90vw;
@@ -222,7 +222,6 @@ header span {
         height: 133px;
         margin: 5px;
     }
-
 }
 
 /*Gra PUZZLE*/
@@ -404,19 +403,19 @@ button:hover {
     width: 100%;
     background-image: url(../img/penguin/pattern-penguin.png);
     height: 100vh;
+    overflow: hidden;
 }
 
 .peng {
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 .points {
     width: 300px;
-    line-height: 20px;
     text-align: center;
     padding: 5px;
-    margin: 10px auto 2px auto;
+    margin: 0 auto;
 }
 
 .penguin-board {
