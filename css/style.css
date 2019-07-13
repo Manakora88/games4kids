@@ -95,10 +95,8 @@ header span {
 
 /*Przycisk cofania*/
 .back, .new-game {
-    line-height: 60px;
     font-family: 'Righteous', cursive;
-    font-size: 30px;
-    padding: 0 30px;
+    font-size: 25px;
     color: grey;
     background-color: lightgrey;
     text-align: center;
@@ -106,17 +104,22 @@ header span {
     box-shadow: 5px 5px 5px grey;
 }
 
+.new-game {
+    padding: 20px;
+}
+
 .back {
     position: fixed;
     top: 0;
     left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 1000px) {
     .back, .new-game {
-        line-height: 40px;
         font-size: 20px;
-        padding: 0 20px;
     }
 }
 
@@ -256,24 +259,31 @@ header span {
 .mix, .choice {
     font-family: 'Righteous', cursive;
     color: grey;
-    font-size: 20px;
+    font-size: 30px;
     background-color: lightgrey;
     text-transform: uppercase;
-    padding: 10px 20px;
+    padding: 20px;
 }
 
 .choice {
-    border-radius: 20px;
+    border-radius: 50px;
 }
 
 button {
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 50px;
 }
 
 button:hover {
     background-color: grey;
     color: #ffe85f;
+}
+
+@media screen and (min-width: 1000px) {
+    .mix, .choice {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
 }
 
 /* Poszczególne elementy puzzli */
