@@ -458,15 +458,15 @@ button:hover {
 }
 
 .arrows {
-    width: 90px;
-    height: 90px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
 }
 
 .small {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
     float: left;
     text-align: center;
 }
