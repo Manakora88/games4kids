@@ -214,10 +214,12 @@
                     document.querySelector(".penguinPlayer").classList.remove('penguinPlayer');
                 }
                 //metoda obsługująca klawiaturę
+                // var arrUp = document.querySelector(".up");
+                // var arrLeft = document.querySelector(".left");
                 this.turnPenguin = function(event) {
                     switch (event.which) {
                         case 37:
-                            self.penguinPlayer.direction = "left";
+                            self.penguinPleftyer.direction = "left";
                             break;
                         case 38:
                             self.penguinPlayer.direction = "up";
