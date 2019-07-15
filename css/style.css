@@ -477,8 +477,40 @@ button:hover {
     border: 2px solid grey;
     text-align: center;
     font-size: 30px;
-    box-shadow: 5px 5px 5px grey;
     cursor: pointer;
+    background-image: url('../img/penguin/arrow.png');
+    background-size: contain;
+}
+
+.up {
+    box-shadow: 5px 5px 5px grey;
+}
+
+.left {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    box-shadow: -5px 5px 5px grey;
+}
+
+.right {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    box-shadow: 5px -5px 5px grey;
+}
+
+.down {
+    -webkit-transform: rotate(100deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    box-shadow: -5px -5px 5px grey;
 }
 
 @media screen and (min-width: 1000px) {

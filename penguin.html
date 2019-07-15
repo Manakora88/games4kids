@@ -121,22 +121,18 @@
                     <div class="small">
                     </div>
                     <div class="small up">
-                        &#8593;
                     </div>
                     <div class="small">
                     </div>
                     <div class="small left">
-                        &#8592;
                     </div>
                     <div class="small">
                     </div>
                     <div class="small right">
-                        &#8594;
                     </div>
                     <div class="small">
                     </div>
                     <div class="small down">
-                        &#8595;
                     </div>
                     <div class="small">
                     </div>
@@ -214,8 +210,10 @@
                     document.querySelector(".penguinPlayer").classList.remove('penguinPlayer');
                 }
                 //metoda obsługująca klawiaturę
-                // var arrUp = document.querySelector(".up");
-                // var arrLeft = document.querySelector(".left");
+                var arrUp = document.querySelector(".up");
+                var arrLeft = document.querySelector(".left");
+                var arrRight = document.querySelector(".right");
+                var arrDown= document.querySelector(".down");
                 this.turnPenguin = function(event) {
                     switch (event.which) {
                         case 37:
