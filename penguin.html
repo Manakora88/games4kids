@@ -120,19 +120,19 @@
                 <div class="arrows">
                     <div class="small">
                     </div>
-                    <div class="small up">
+                    <div class="small arr up">
                     </div>
                     <div class="small">
                     </div>
-                    <div class="small left">
+                    <div class="small arr left">
                     </div>
                     <div class="small">
                     </div>
-                    <div class="small right">
+                    <div class="small arr right">
                     </div>
                     <div class="small">
                     </div>
-                    <div class="small down">
+                    <div class="small arr down">
                     </div>
                     <div class="small">
                     </div>
@@ -211,16 +211,39 @@
                 }
                 //metoda obsługująca klawiaturę
                 this.turnPenguin = function(event) {
-                    if ((event.keyCode == 37) || (event.className == "left")) {
-                        self.penguinPleftyer.direction = "left";
-                    } else if ((event.keyCode == 38) || (event.className == "up")) {
-                        self.penguinPlayer.direction = "up";
-                    } else if ((event.keyCode == 39) || (event.className == "right")) {
-                        self.penguinPlayer.direction = "right";
-                    } else if ((event.keyCode == 40) || (event.className == "down")) {
-                        self.penguinPlayer.direction = "down";
+                    switch (event.which) {
+                        case 37:
+                            self.penguinPlayer.direction = "left";
+                            break;
+                        case 38:
+                            self.penguinPlayer.direction = "up";
+                            break;
+                        case 39:
+                            self.penguinPlayer.direction = "right";
+                            break;
+                        case 40:
+                            self.penguinPlayer.direction = "down";
+                            break;
                     }
                 }
+                //metoda dla wersji telefonicznej do obsługi sterowania za pomocą strzałek
+                var left = document.querySelector(".left");
+                var up = document.querySelector(".up");
+                var right = document.querySelector(".right");
+                var down = document.querySelector(".down");
+
+                left.addEventListener("click", function() {
+                    self.penguinPlayer.direction = "left";
+                });
+                up.addEventListener("click", function() {
+                    self.penguinPlayer.direction = "up";
+                });
+                right.addEventListener("click", function() {
+                    self.penguinPlayer.direction = "right";
+                });
+                down.addEventListener("click", function() {
+                    self.penguinPlayer.direction = "down";
+                });
                 //metoda kolizji Pingwina z rybą
                 this.checkFishCollision = function() {
                     if (this.penguinPlayer.x == this.fish.x && this.fish.y == this.penguinPlayer.y) {
@@ -237,7 +260,7 @@
                         clearInterval(this.idSetInterval);
                         this.hideVisiblePenguin();
                         document.querySelector(".penguin-board").innerHTML =
-                        "<p>Koniec gry! Twój wynik to <span>" + this.score + "</span>!!!</p>";
+                        "<p>Koniec gry! Twój wynik wynosi <span>" + this.score + "</span>!!!</p>";
                         document.querySelector(".penguin-score").style.display = "none";
                         document.querySelector(".arrows").style.display = "none";
                     }
