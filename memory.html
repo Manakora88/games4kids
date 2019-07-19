@@ -51,11 +51,6 @@
                     Gry
                 </button>
             </a>
-            <a href="./memory.html">
-                <button class="new-game" onclick="mixArray(cards)" title="Wczytaj nową grę">
-                    Nowa gra
-                </button>
-            </a>
         </main>
 
         <script>
@@ -146,7 +141,7 @@
                 document.getElementById("card" + numb2).style.opacity = "0";
                 left--;
                 if (left == 0) {
-                    document.querySelector(".memory-board").innerHTML = "<p>Brawo! Udało Ci się ukończyć grę w <span>" + counter + "</span> ruchach</p>";
+                    document.querySelector(".memory-board").innerHTML = "<p>Brawo! Udało Ci się ukończyć grę w <span>" + counter + "</span> ruchach<br/><a href='./memory.html'><button class='new-game' onclick='mixArray(cards)' title='Wczytaj nową grę'>Nowa gra</button></a></p>";
                     document.querySelector(".memory-score").style.visibility = "hidden";
                 }
                 stop = false;

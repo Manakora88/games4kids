@@ -143,11 +143,6 @@
                     Gry
                 </button>
             </a>
-            <a href="./penguin.html">
-                <button class="new-game" title="Wczytaj nową grę">
-                    Nowa gra
-                </button>
-            </a>
         </main>
 
         <script>
@@ -187,7 +182,7 @@
                     //wprowadzam zmienną self, zeby wewnątrz eventu móc użyć "this", które będzie odnosiło się do obiektu, a nie do eventu
                     this.idSetInterval = setInterval(function(){
                         self.movePenguin();
-                    }, 250);
+                    }, 300);
                 }
                 //metoda dotycząca poruszania się Pingwina
                 this.movePenguin = function(){
@@ -260,7 +255,7 @@
                         clearInterval(this.idSetInterval);
                         this.hideVisiblePenguin();
                         document.querySelector(".penguin-board").innerHTML =
-                        "<p>Koniec gry! Twój wynik wynosi <span>" + this.score + "</span>!!!</p>";
+                        "<p>Koniec gry!<br/>Twój wynik wynosi <span>" + this.score + "</span>!!!<br/><a href='./penguin.html'><button class='new-game' title='Wczytaj nową grę'>Nowa gra</button></a></p>";
                         document.querySelector(".penguin-score").style.display = "none";
                         document.querySelector(".arrows").style.display = "none";
                     }
