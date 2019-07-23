@@ -77,11 +77,6 @@ header span {
     border-bottom: 1px dotted black;
 }
 
-.tooltiptext {
-    font-size: 13px;
-    text-transform: none;
-}
-
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 300px;
@@ -97,6 +92,8 @@ header span {
     margin-left: -150px;
     opacity: 0;
     transition: opacity 0.3s;
+    font-size: 13px;
+    text-transform: none;
 }
 
 .tooltip .tooltiptext::after {
@@ -137,7 +134,7 @@ header span {
     }
 }
 
-/*Przycisk cofania*/
+/*Przyciski dla cofania do menu z grami i dla wgrania nowej gry*/
 .back, .new-game {
     font-family: 'Righteous', cursive;
     font-size: 25px;
@@ -323,13 +320,6 @@ button:hover {
     color: #ffe85f;
 }
 
-@media screen and (min-width: 1000px) {
-    .mix, .choice {
-        font-size: 20px;
-        padding: 10px 20px;
-    }
-}
-
 /* Poszczególne elementy puzzli */
 .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9, .block10, .block11, .block12, .block13, .block14, .block15, .block16 {
     display: table-cell;
@@ -437,6 +427,10 @@ button:hover {
 }
 
 @media screen and (min-width: 1000px) {
+    .mix, .choice {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
     .game-puzzle {
         height: 100vh;
         vertical-align: middle;

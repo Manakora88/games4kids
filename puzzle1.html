@@ -15,6 +15,7 @@
 
     <body>
         <main class="game-puzzle">
+            <!--Sekcja z układanym aktualnie obrazkiem-->
             <section class="main-puzzle">
                 <button class="center mix" onClick="mix()">Przemieszaj</button>
                 <div class="table center">
@@ -44,6 +45,7 @@
                      </div>
                 </div>
             </section>
+            <!--Sekcja z obrazkami do wyboru-->
             <section class="choice-puzzle">
                 <div class="center choice">
                     Wybierz obrazek
@@ -71,6 +73,7 @@
                     </div>
                 </div>
             </section>
+            <!--Klawisz cofający do menu z grami-->
             <a href="./index.html">
                 <button class="back" title="Wróć do wyboru gier">
                     Gry
@@ -93,7 +96,6 @@
                     return alert("Brawo! Obrazek gotowy!");
                 }
             }
-
 
             //tworzę funkcję, która przetasuje układ puzzli
             function mix() {
